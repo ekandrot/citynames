@@ -1,5 +1,5 @@
 # citynames
-Generate city names based on US city dictionary
+Generate city names based on US city dictionary.  Wrote more about it here:  http://ekandrotcode.blogspot.com/2016/10/city-name-generator-ml.html
 
 # How does it work
 
