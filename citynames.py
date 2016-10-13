@@ -86,16 +86,16 @@ total = len(cities)
 def generate_with_combos2():
     for i in range(20):
         word = ''
-        r = int(random.uniform(0, total-1))
+        r = int(random.randint(0, total-1))
         letter = findnthList(firstLetter, r)
         word += letter
     
-        r = int(random.uniform(0, secondLetter[letter]['total']-1))
+        r = int(random.randint(0, secondLetter[letter]['total']-1))
         letter = findnthDict(secondLetter[letter], r)
         word += letter
     
         while letter != '\n':
-            r = int(random.uniform(0, combos2[letter]['total']-1))
+            r = int(random.randint(0, combos2[letter]['total']-1))
             letter = findnthDict(combos2[letter], r)
             if letter == '\n':
                 break
@@ -105,19 +105,19 @@ def generate_with_combos2():
 def generate_with_combos3():
     for i in range(20):
         word = ''
-        r = int(random.uniform(0, total-1))
+        r = int(random.randint(0, total-1))
         letter = findnthList(firstLetter, r)
         word += letter
         prevLetter0 = letter
     
-        r = int(random.uniform(0, secondLetter[letter]['total']-1))
+        r = int(random.randint(0, secondLetter[letter]['total']-1))
         letter = findnthDict(secondLetter[letter], r)
         word += letter
         prevLetter1 = letter
     
         while letter != '\n':
             prevCombo = prevLetter0 + prevLetter1
-            r = int(random.uniform(0, combos3[prevCombo]['total']-1))
+            r = int(random.randint(0, combos3[prevCombo]['total']-1))
             letter = findnthDict(combos3[prevCombo], r)
             if letter == '\n':
                 break
